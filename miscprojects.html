@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic Jump Anniversary - Misc. Projects</title>
+    <link rel="icon" type="image/png" href="misc/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="scripts.js"></script>
+  </head>
+  <body id="top" style="background-image: url('misc/bg6.gif');">
+    <header>
+      <span class="burger" id="burger" onclick="Nav()">&#9776;</span>
+      <h1>Misc. Projects</h1>
+      <a href="updates.html"><img class="logo2" src="misc/title_right.png"></a>
+      <nav id="mySidenav">
+        <div>
+          <h2>Misc. Projects</h2>
+          <a href="projects.html" class="button">&#8617; BACK</a>
+          <a href="#event" class="button">Event making</a>
+          <a href="#multiplayer" class="button">Multiplayer Mode</a>
+          <a href="#spritesheet" class="button">Sprite Sheet Manipulation</a>
+        </div>
+      </nav>
+    </header>
+    <section onclick="closeNav()">
+      <div class="block">
+        <h1>Miscellaneous Projects</h1>
+        <p>If you want to give some help for the game mod development, this page is for you!</p>
+        <p><strong>You can check the different projects for the game mod development down below.</strong></p>
+      </div>
+      <br><hr><h1 id="event">Event Making</h1>
+      <div class="block">
+        <p>Sonic Jump Anniversary introduces events to make the game replayable at certain times of the year.</p>
+        <p>If you are interested on making new events for the game, you can make additional content for the event ideas.</p>
+        <p>In the <strong>res/drawable</strong> folder of the extracted game, you can find similar looking images with a date prefix on their name.<br>
+        For example: <strong>131073.png</strong> is the background image for Green Hill Zone, whereas <strong style="color: cyan;">131073_dec25.png</strong> is its <strong style="color: cyan;">Christmas event</strong> version and <strong style="color: orange;">131073_oct31.png</strong> is its <strong style="color: orange;">Halloween event</strong> version.</p>
+        <p>Here are the available events in the game and their date prefix:</p>
+        <ul><strong>
+            <li>jun23: Sonic's birthday</li>
+            <li>oct31: Halloween</li>
+            <li>dec25: Christmas</li>
+          </strong></ul>
+        <p>If you want to share your event ideas or want to make other ideas for new events, you can contact <strong>Furrican</strong> via the <strong>Furrican Homepage</strong>.</p>
+      </div>
+      <br><hr><h1 id="multiplayer">Multiplayer Mode</h1>
+      <div class="block">
+        <p>The goal of this project is to make the <strong>Multiplayer Mode</strong> enjoyable to play.</p>
+        <p>In fact, the <strong>Multiplayer Mode</strong> is actually present in the game, but you have to access it via the secret cheat code. The main reason why this game mode is hidden is because of how it looks in gameplay.</p>
+        <img class="center" src="screenshots/multi0.png">
+        <p>As you can see, during multiplayer, there is a canvas that displays on the top-left of the screen. This canvas is the other player's screen. Obviously, this is a problem, considering that the small canvas hides a part of the main player's screen.</p>
+        <p><strong>The better solution would be to make a function that makes the other player's character appear on one player's screen, like in most handheld multiplayer games. But the problem is that this idea is way too complicated to make it possible.</strong></p>
+        <p>If you are enough experience with Java/Smali programming, you can give some help for this game mode.</p>
+      </div>
+      <br><hr><h1 id="spritesheet">Sprite Sheet Manipulation</h1>
+      <div class="block">
+        <p>While modding the game, you can modify sprites on sprite sheets, but you currently can't change their size and position values.</p>
+        <p><strong>Unfortunately, the sprite size and position values aren't located in the Smali code. Instead, they are located in specific files encrypted in the .pak files (located in the "res/drawable" folder of the decompiled game).</strong></p>
+        <p>Here is the proof: If you open a .pak file with a HEX editor and check the hex values, you can find letters that represent different file formats.</p>
+        <img class="center" src="screenshots/pakfiles.PNG">
+        <p>In numerous places, <strong>you can recognize the "PNG" and "DAT" format, as well as what seem to be "HDR" and "PAB" file formats</strong>.</p>
+        <p>In fact, <strong>GdGohan</strong> has already managed to extract the .png files, but not the rest. If we can extract all the remaining the files, that means we can finally access the values that determines the size and position of each sprite.</p>
+        <p>The purpose of this project is once we can fully manipulate sprite sheets, <strong>it is possible to add more playable characters</strong>, because the sprites of Sonic and Shadow are limited in terms of size on the sprite sheets.</p>
+        <p>Additionally, manipulating the sprites also allow us to fix animation issues, such as the double jump when facing left.<br><strong>Notice how the double jump spin effect isn't animated correctly.</strong></p>
+        <img class="center" src="screenshots/doublejump.png"><br>
+      </div>
+    </section>
+    <footer>
+      <br><hr>
+      <p>
+        <strong>
+          Original game ©SEGA CORPORATION.<br>
+          ©AIRPLAY/SEGA CORPORATION, 2005, 2007, 2011. All rights reserved.<br>
+          SONIC JUMP, Sonic the Hedgehog and all related characters are registered trademarks of SEGA CORPORATION.
+        </strong>
+      </p>
+      <div></div>
+    </footer>
+  </body>
+</html>
