@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic Jump Anniversary - Q&A Page</title>
+    <link rel="icon" type="image/png" href="misc/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="scripts.js"></script>
+  </head>
+  <body id="top" style="background-image: url('misc/bg8.gif');">
+    <header>
+      <span class="burger" id="burger" onclick="Nav()">&#9776;</span>
+      <a href="updates.html"><img class="logo2" src="misc/title_right.png"></a>
+      <nav id="mySidenav">
+        <div>
+          <h2>Q&A Page</h2>
+          <a href="support.html" class="button">&#8617; BACK</a>
+          <a href="#asked" class="button">Frequently Asked Questions</a>
+          <a href="#extra" class="button">Extra Questions</a>
+          <a href="#gamemod" class="button">About Game Modding</a>
+        </div>
+      </nav>
+    </header>
+    <section onclick="closeNav()">
+      <div class="block">
+        <h1>Q&A Page</h1>
+        <p>If you want to ask questions about Sonic Jump Anniversary and game modding, you may find the answers that you are looking for in this page!</p>
+        <p><strong>Select a question to showcase the answer.</li></strong></p>
+      </div>
+      <br><hr><h1 id="asked">Frequently Asked Questions</h1>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(0)">Why does the game have a terrible frame rate?</li></strong></p>
+        <div id="answer0" style="display: none">
+          <p>
+            The game is actually intended to run at such a low frame rate. This is not a glitch, nor a performance issue.<br>
+            This is something that could be potentially fixed in the future.
+          </p>
+          <p>
+            For more information, check out the <a href="projects.html"><strong>Modding Projects</strong></a> project page.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(1)">Why can't I install the game?</li></strong></p>
+        <div id="answer1" style="display: none">
+          <p>
+            Because the game is designed for older Android devices, you may encounter an "Unsafe app blocked" message. When this occurs, press "Install anyway" to proceed.
+          </p>
+          <img src="screenshots/install.png" class="center">
+          <p>
+            If the problem still persists, contact <strong>Furrican</strong> via the Game Jolt/itch.io project page, or via the <strong>Furrican Homepage</strong>.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(2)">Is Sonic Jump Anniversary safe?</li></strong></p>
+        <div id="answer2" style="display: none">
+          <p>
+            Yes. Like many Sonic fangames, this game does not contain any malware or other malicious programs whatsoever.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(3)">Can I play Sonic Jump Anniversary on PC?</li></strong></p>
+        <div id="answer3" style="display: none">
+          <p>
+            Of course. To do so, you need an Android emulator (like BlueStacks).
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(4)">Can I play Sonic Jump Anniversary with a game controller?</li></strong></p>
+        <div id="answer4" style="display: none">
+          <p>
+            Unfortunately, this game isn't designed to be played with a game controller and there are currently no plans on adding controller support.
+          </p>
+          <p>
+            When playing on an emulator, you can actually use the arrow keys to play, but your controls are limited in this way.
+          </p>
+        </div>
+      </div>
+      <br><hr><h1 id="extra">Extra Questions</h1>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(10)">Is Sonic Jump Anniversary a fangame?</li></strong></p>
+        <div id="answer10" style="display: none">
+          <p>
+            No. <strong>Sonic Jump Anniversary is actually a mod of an already existing Android port of Sonic Jump</strong>.<br>
+            This Android port was released in 2011 via a service named <a href="https://segaretro.org/Puyo_Puyo!_Sega" target="_blank"><strong>Puyo Puyo! Sega</strong></a>. This service is provided by SEGA exclusively for Japanese mobile phones.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(11)">Why are the music and sound effects different?</li></strong></p>
+        <div id="answer11" style="display: none">
+          <p>
+            The Android port of Sonic Jump has issues with some of its music and sound effects. Some .mid instruments sound too loud.
+          </p>
+          <p>
+            Because of this, some music and the attack sound effect needed to be replaced by better audio quality.<br>
+            The game now contains .ogg files, instead of .mid.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(12)">Why is the game asking me to access data on my device?</li></strong></p>
+        <div id="answer12" style="display: none">
+          <p>
+            When booting Sonic Jump Anniversary for the first time, the game asks you for permission to access file data.<br>
+            If you allow permission, a folder named <strong>SonicJump</strong> will be created in the <strong>Documents</strong> folder. The <strong>SonicJump</strong> folder is where your save file is located <strong>(sj_save.dat)</strong>.
+          </p>
+          <p>
+            However, while the game can export save data, there is currently no way to load save data. Transferring save data is a feature that will likely be available in a future update.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(13)">How long does Sonic Jump Anniversary take to be released?</li></strong></p>
+        <div id="answer13" style="display: none">
+          <p>
+            Sonic Jump Anniversary has begun development by late-January 2025 and has a fluid development cycle. Therefore, it took approximately 7 months for the Anniversary mod to be completed.
+          </p>
+        </div>
+      </div>
+      <br><hr><h1 id="gamemod">About Game Modding</h1>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(20)">I would like to make my own mod. Can I take Sonic Jump Anniversary to work on it?</li></strong></p>
+        <div id="answer20" style="display: none">
+          <p>
+            Yes. <strong>Sonic Jump Anniversary is free to be downloaded and modified at your own will</strong>.
+          </p>
+          <p>
+            However, while publishing your own mod, <strong>make sure to leave credits to Furrican and GdGohan as original modders</strong>.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(21)">How to mod Sonic Jump Anniversary?</li></strong></p>
+        <div id="answer21" style="display: none">
+          <p>
+            Sonic Jump Anniversary can be modded by using different software tools.<br>
+            It's best to mod on PC for better visibility, but you can also mod on your Android device.
+          </p>
+          <p>
+            To decompile and/or modify the game, you need an APK editor software tool (like APK Easy Tool, APK Editor or MT Manager).
+          </p>
+          <p>
+            For the sprites, you can change them by using a drawing software tool (like Paint.net, IbisPaint or Paint Tool SAI).
+          </p>
+          <p>
+            And for more advanced modifications, APK editor tools can decompile the game's code to Smali. If you have the programming skills and knowledge, you can change the game's code to implement additional functions and modifications.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(22)">When I try to mod Sonic Jump Anniversary, the game doesn't work or is corrupted. What can I do?</li></strong></p>
+        <div id="answer22" style="display: none">
+          <p>
+            If you have touched the game code's, but have no idea how to solve it, try to decompile the game again with the APK editor tool.
+          </p>
+          <p>
+            If you want to touch the game's code, <strong>make sure to understand the programming logic before making changes in the game's code</strong>. Otherwise, the game might won't boot.
+          </p>
+          <p>
+            For the graphics, make sure to set sprites correctly, or the result won't look pretty.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(23)">The game crashes anytime I change text in the .dat files. What can I do?</li></strong></p>
+        <div id="answer23" style="display: none">
+          <p>
+            The .dat files are meant to be modified by using a HEX editor, as they contain values to determines the number of text slots and slot sizes.
+          </p>
+          <p>
+            Take the text <strong>HIGH SCORES</strong>, for example. You can see 2 dots before this text. These dots are actually 8-bit values (located in <strong>UInt8</strong>) which determines the text size.
+          </p>
+          <p>
+            If the value does not equal the number of characters in the text, the game crashes at certain points. So you need to count the number of characters in the text slot, and then change the value to the coresponded number of characters.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(24)">I don't understand Smali language. What can I do?</li></strong></p>
+        <div id="answer24" style="display: none">
+          <p>
+            Smali is a specialised language used to run Android apps. If you want to have a better understading of the game's code, <strong>you can convert Smali code to Java by using a Java decompiler software tool</strong> (like JADX).
+          </p>
+          <p>
+            However, some parts of the code won't be decompiled properly, due to compatibility issues. And you cannot change the code when converted into Java to recompile the game directly.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <br><hr>
+      <p>
+        <strong>
+          Original game ©SEGA CORPORATION.<br>
+          ©AIRPLAY/SEGA CORPORATION, 2005, 2007, 2011. All rights reserved.<br>
+          SONIC JUMP, Sonic the Hedgehog and all related characters are registered trademarks of SEGA CORPORATION.
+        </strong>
+      </p>
+      <div></div>
+    </footer>
+  </body>
+</html>

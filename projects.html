@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic Jump Anniversary - Modding Projects</title>
+    <link rel="icon" type="image/png" href="misc/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="scripts.js"></script>
+  </head>
+  <body id="top" style="background-image: url('misc/bg6.gif');">
+    <header>
+      <span class="burger" id="burger" onclick="Nav()">&#9776;</span>
+      <a href="updates.html"><img class="logo2" src="misc/title_right.png"></a>
+      <nav id="mySidenav">
+        <div>
+          <h2>Modding Projects</h2>
+          <a href="community.html" class="button">&#8617; BACK</a>
+          <a href="#fps" class="button">Frame Rate Increasing</a>
+          <a href="#multiplayer" class="button">Multiplayer Mode</a>
+          <a href="#spritesheet" class="button">Sprite Sheet Manipulation</a>
+        </div>
+      </nav>
+    </header>
+    <section onclick="closeNav()">
+      <div class="block">
+        <h1>Modding Projects</h1>
+        <p>If you want to give some help for the game mod development, this page is for you!</p>
+        <p><strong>You can check the different projects for the game mod development down below.</strong></p>
+      </div>
+      <br><hr><h1 id="fps">Frame Rate Increasing</h1>
+      <div class="block">
+        <p>
+          <strong>DESCRIPTION:</strong><br>
+          The goal of this project is to make the Android port of Sonic Jump running at a higher frame rate. However, while this sounds simple, this task is actually too demanding to make it possible. This page explains how to make the game running smooth and why it is complicated.
+        </p>
+        <p>Also, if you have enough experience with Java/Smali programming and would like to give some help for this project, you can contact <strong>Furrican</strong> via the <strong>Furrican Homepage</strong>.</p>
+      </div>
+      <div class="block">
+        <p>
+          <strong>HOW THE GAME WORKS:</strong><br>
+          First, you need to decompile the game's APK file to access the game's code. Then, search for "fps" in the <strong>Game_Draw</strong> Java file and you will stumble across a condition in the <strong>run()</strong> method.
+        </p>
+        <img class="center" src="screenshots/projects0.PNG">
+        <p>In this condition, you can see that the fps equals 1000 divided by <strong>MIMIMUM_FRAME_TIME</strong>. If you search for <strong>MIMIMUM_FRAME_TIME</strong>, you will find out that it equals 60.<br>So according to the condition, the frame rate equals 1000 / 60 = 16.66666667.</p>
+        <p>Now we know that the game runs at 16.66666667fps. While you might think that the game lags so much, <strong>the game is actually desigend to run at this frame rate!</strong></p>
+      </div>
+      <div class="block">
+        <p><strong>RUNNING AT 50fps:</strong><br>
+          Since we now know how the game works, all you have to know now is changing the <strong>MIMIMUM_FRAME_TIME</strong> value to increase the frame rate.
+        </p>
+        <p>Now let's make the game running at 50fps. In Smali, find <strong>MIMIMUM_FRAME_TIME</strong> in the <strong>clinit</strong> method and replace 0x3c to 0x14. This will make <strong>MIMIMUM_FRAME_TIME</strong> to equal 20.</p>
+        <img class="center" src="screenshots/projects1.PNG">
+        <p>Once this value is changed, recompile the APK, and voila! Problem solved, right?</p>
+        <p><strong>WRONG! As it turns out, doing so makes the game run too fast! It runs 3 times faster than it supposed to be.</strong></p>
+      </div>
+      <div class="block">
+        <p>
+          <strong>SOLUTIONS IN THEORY:</strong><br>
+          The question that is actually the right one to ask is this:
+          <br>
+          <strong>How to make the game running smoother and at the right speed?</strong>
+        </p>
+        <p>Well, here's a theory: Since the game is intentionally running at a low frame rate, <strong>we have to change all the values regarding speed, physics, gravity, time and animation frames by dividing or multiplying all those values by 3 or 4.</strong> In this way, the game will run 3 or 4 times slower at 16.66666667fps, but it will run at normal speed at 50fps or above!</p>
+        <p>You might think that this is a good news, but the problem is that this is more complicated. You see, <strong>tracking down every value regarding speed, physics, gravity, time and animation frames will take a lot of time, patience and understandings of the game's code</strong>.
+        <hr>
+        <p>Additionally, <strong>GdGohan</strong> has found a way to make the game run smoother on his side.</p>
+        <p>The way he did is by replacing the <strong>System.currentTimeMillis()</strong> function by <strong>System.nanoTime()</strong> and the <strong>fps / MIMIMUM_FRAME_TIME</strong> condition by a new method named <strong>fps()</strong>.</p>
+        <img class="center" src="screenshots/projects2.PNG">
+        <p>In this method, <strong>GdGohan</strong> has opted to a nanoTime system in an attempt to make the game run smoother. And surprisingly, it works on his device! But it doesn't work on other devices, nor BlueStacks, as the game still runs too fast when this method is applied.</p>
+        <hr>
+        <p>With all that said, if you are an <strong>experimented Java/Smali programmer, with good debugging tools if possible</strong>, you can give some help until this project is finished. In the meantime, <strong>GdGohan</strong> can take care of the issue, but it seems more complicated than expected.</p>
+      </div>
+      <br><hr><h1 id="multiplayer">Multiplayer Mode</h1>
+      <div class="block">
+        <p>
+          <strong>DESCRIPTION:</strong><br>
+          The goal of this project is to make the <strong>Multiplayer Mode</strong> enjoyable to play by solving the canvas issue and give this game mode purpose.
+        </p>
+        <p>In fact, the <strong>Multiplayer Mode</strong> is actually present in the game, but you have to access it via the secret cheat code. The main reason why this game mode is hidden is because of how it looks in gameplay.</p>
+        <img class="center" src="screenshots/multi0.png">
+        <p>As you can see, during multiplayer, there is a canvas that displays on the top-left of the screen. This canvas is the other player's screen. Obviously, this is a problem, considering that the small canvas hides a part of the main player's screen.</p>
+        <p><strong>Here are the different solutions that we can come up with to solve the canvas issue:</strong></p>
+      </div>
+      <div class="block">
+        <br><img class="center" src="screenshots/multi1.png">
+        <p>
+          <strong>SOLUTION 1 (Split screen):</strong><br>
+          <strong>The first solution would be to make each player canvas the same size by reducing the heights in half.</strong>
+        </p>
+        <p>
+          However, this setup is not suitable when the <strong>VIRTUAL PAD</strong> option is OFF.
+        </p>
+      </div>
+      <div class="block">
+        <br><img class="center" src="screenshots/multi2.png">
+        <p>
+          <strong>SOLUTION 2 (Landscape view):</strong><br>
+          <strong>The second solution would be to make the game view landscape, so we can fit 2 canvases on the same screen.</strong>
+        </p>
+        <p>
+          However, like the split screen idea, this setup is not suitable when the <strong>VIRTUAL PAD</strong> option is OFF.<br>
+          Also, it makes the canvas way smaller in size.
+        </p>
+      </div>
+      <div class="block">
+        <br><img class="center" src="screenshots/multi3.png">
+        <p>
+          <strong>SOLUTION 3 (2 characters in the same canvas):</strong><br>
+          <strong>The better solution would be to make a function that makes the other player's character appear on one player's screen, like in most handheld multiplayer games.</strong>
+        </p>
+        <p>
+          But the problem is that this idea is way too complicated to make it possible.
+        </p>
+      </div>
+      <br><hr><h1 id="spritesheet">Sprite Sheet Manipulation</h1>
+      <div class="block">
+        <p>While modding the game, you can modify sprites on sprite sheets, but you currently can't change their size and position values.</p>
+        <p><strong>Unfortunately, the sprite size and position values aren't located in the Smali code. Instead, they are located in specific files encrypted in the .pak files (located in the "res/drawable" folder of the decompiled game).</strong></p>
+        <p>Here is the proof: If you open a .pak file with a HEX editor and check the hex values, you can find letters that represent different file formats.</p>
+        <img class="center" src="screenshots/projects3.PNG">
+        <p>In numerous places, <strong>you can recognize the "PNG" and "DAT" format, as well as what seem to be "HDR" and "PAB" file formats</strong>.</p>
+        <p>In fact, <strong>GdGohan</strong> has already managed to extract the .png files, but not the rest. If we can extract all the remaining the files, that means we can finally access the values that determines the size and position of each sprite.</p>
+        <p>The purpose of this project is once we can fully manipulate sprite sheets, <strong>it is possible to add more playable characters</strong>, because the sprites of Sonic and Shadow are limited in terms of size on the sprite sheets.</p>
+        <p>Additionally, manipulating the sprites also allow us to fix animation issues, such as the double jump when facing left.<br><strong>Notice how the double jump spin effect isn't animated correctly.</strong></p>
+        <img class="center" src="screenshots/projects4.png"><br>
+      </div>
+    </section>
+    <footer>
+      <br><hr>
+      <p>
+        <strong>
+          Original game ©SEGA CORPORATION.<br>
+          ©AIRPLAY/SEGA CORPORATION, 2005, 2007, 2011. All rights reserved.<br>
+          SONIC JUMP, Sonic the Hedgehog and all related characters are registered trademarks of SEGA CORPORATION.
+        </strong>
+      </p>
+      <div></div>
+    </footer>
+  </body>
+</html>
