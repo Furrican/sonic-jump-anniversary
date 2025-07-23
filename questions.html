@@ -18,6 +18,7 @@
           <a href="#asked" class="button">Frequently Asked Questions</a>
           <a href="#extra" class="button">Extra Questions</a>
           <a href="#gamemod" class="button">About Game Modding</a>
+          <a href="#gamemaps" class="button">About Game Maps</a>
         </div>
       </nav>
     </header>
@@ -187,6 +188,58 @@
           </p>
           <p>
             However, some parts of the code won't be decompiled properly, due to compatibility issues. And you cannot change the code when converted into Java to recompile the game directly.
+          </p>
+        </div>
+      </div>
+      <br><hr><h1 id="gamemaps">About Game Maps</h1>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(30)">The stage isn't turned into my own after saving. What is going on?</li></strong></p>
+        <div id="answer30" style="display: none">
+          <p>
+            The problem mostly comes from the <strong>CONFIG</strong> menu. If the stage name and graphics aren't changed, make sure to configure all settings before saving.
+          </p>
+          <p>
+            Sometimes, if the stage layout isn't changed despite modification before saving, it is possible that the game hasn't loaded the stage correctly. If so, go back to the <strong>Map Editor</strong>, load your map and save it again.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(31)">Why is there no music in my own stage?</li></strong></p>
+        <div id="answer31" style="display: none">
+          <p>
+            If you have selected a custom music and checked this option, the music takes time to load when playing the stage, because the custom music are stored in an external library.
+          </p>
+          <p>
+            If you have no music played during stages, <strong>you can bring the regular game soundtrack back by saving your map as a .bin file.</strong>
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(32)">I don't remember which file is my stored map and where to find it. What can I do?</li></strong></p>
+        <div id="answer32" style="display: none">
+          <p>
+            The map files are located in the <strong>SonicJump subfolder</strong>. This folder is most probably located in the <strong>Download</strong> folder of your internal device.
+          </p>
+          <p>
+            Also, <strong>because map files don't overwrite anytime you save</strong>, you might ended up with a lot of duplicated files.
+            But the file with the biggest number in () has to be the most recent one.
+          </p>
+          <p>
+            You need to organize your files to avoid confusion. For better organization, make sure to store and backup your latest map file before starting making a new map.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(33)">My game map doesn't appear in the Online Stages page. What can I do?</li></strong></p>
+        <div id="answer33" style="display: none">
+          <p>
+            If the New Issue menu doesn't let you select labels, your issue won't be labeled as a custom map after saving in the repository and your issue won't be visible.
+          </p>
+          <p>
+            However, you can still find your issue by removing the Custom map label of the repository search bar.
+          </p>
+          <p>
+            If you want your issue to be labeled while you can't, try to contact <a href="https://github.com/gdgohan" target="_blank"><strong>GdGohan</strong></a> to inform him of the issue.
           </p>
         </div>
       </div>
