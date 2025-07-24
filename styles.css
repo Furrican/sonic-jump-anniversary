@@ -58,7 +58,7 @@ nav{
   overflow-x: hidden;
   transition: 0.5s;
 }
-nav a, .burger, .download a, .external a, .index a, .multimenus a{
+nav a, .back, .burger, .download a, .external a, .index a, .multimenus a{
   display: block;
   transition: 0.3s;
   color: white;
@@ -66,7 +66,7 @@ nav a, .burger, .download a, .external a, .index a, .multimenus a{
   text-shadow: -1px 0 #000, 1px 0 #000, 0 -1px #000, 0 1px #000, -1px 1px #000, 1px 1px #000, 1px -1px #000, -1px -1px #000,
   1px 2px #000, 3px 2px #000, 2px 1px #000, 2px 3px #000, 1px 3px #000, 3px 1px #000, 3px 3px #000, 1px 1px #000;
 }
-nav a:hover, .burger:hover, .download a:hover, .external a:hover, .button-active{
+nav a:hover, .back:hover, .burger:hover, .download a:hover, .external a:hover, .button-active{
   background-color: #5A5910;
 }
 nav a, .download a, .external a{
@@ -119,12 +119,38 @@ li{
 .archived{
   max-height: 320px;
 }
-.block{
-  background-color: rgba(0, 0, 0, 0.5);
+.block, .block1, .block2, .block3, .block4, .block5, .block6, .block7, .block8, .block9{
   padding: 1px 12px 1px 12px;
   margin-top: 20px;
 }
-.burger{
+.block{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.block1{
+  background-color: rgba(128, 0, 0, 0.8);
+}
+.block2{
+  background-color: rgba(0, 0, 128, 0.8);
+}
+.block3{
+  background-color: rgba(128, 0, 128, 0.8);
+}
+.block4{
+  background-color: rgba(128, 128, 0, 0.8);
+}
+.block5{
+  background-color: rgba(0, 96, 0, 0.8);
+}
+.block6{
+  background-color: rgba(0, 128, 128, 0.8);
+}
+.block7{
+  background-color: rgba(96, 96, 96, 0.8);
+}
+.block8{
+  background-color: rgba(160, 96, 0, 0.8);
+}
+.back, .burger{
   cursor: pointer;
   left: 6px;
   position: absolute;
@@ -134,11 +160,11 @@ li{
   font-size: 32px;
   margin: 10px;
 }
-.burger, .download a, .external a{
+.back, .burger, .download a, .external a{
   background-color: #BDB252;
   box-shadow: 0 0 0 1px black, 0 0 0 2px #BDB252, 0 0 0 4px #F7E76B, 0 0 0 5px #BDB252, 0 0 0 6px black;
 }
-.burger, .download, .download a, .external, .external a, .hints, .index, .index a{
+.back, .burger, .download, .download a, .external, .external a, .hints, .index, .index a{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -244,6 +270,15 @@ li{
 }
 .question:hover{
   color: #FFAD5A;
+}
+.sonic{
+  min-height: 260px;
+  background-image: url("misc/sonic.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .spaced{
   padding-left: 32px;
