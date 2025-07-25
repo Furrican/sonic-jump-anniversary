@@ -54,7 +54,7 @@
         </p>
         <p>However, handling those files might be complicated for those who don't understand the logic behind them. Therefore, this section serves as a guide to explain how to handle these files.</p>
         <p>First of all, .dat files are meant to be editable via a Hex Editor software tool.</p>
-        <img src="screenshots/hxd0.png" class="center">
+        <img src="screenshots/hxd0.PNG" class="center">
         <p>
           This is a screenshot of the <strong>HxD</strong> software on PC. The settings has been oversimplified for this guide. 
         </p>
@@ -68,7 +68,7 @@
         </p>
       </div>
       <div class="block">
-        <br><img src="screenshots/hxd1.png" class="center">
+        <br><img src="screenshots/hxd1.PNG" class="center">
         <p>
           <strong>.DAT FILE BASIC STRUCTURE:</strong><br>
           On the screenshots, you have recognized the text written in English. However, the text are actually in text slots that are seperated by dots or other characters.
@@ -94,7 +94,7 @@
       </div>
       <br><hr><h1 id="datfiles">Handling the .dat files</h1>
       <div class="block">
-        <br><img src="screenshots/hxd2.png" class="center">
+        <br><img src="screenshots/hxd2.PNG" class="center">
         <p>
           <strong>NUMBER OF TEXT SLOTS:</strong><br>
           And now, let's dive in the text. But first, let's talk about the first special character.
@@ -110,7 +110,7 @@
         </p>
       </div>
       <div class="block">
-        <br><img src="screenshots/hxd3.png" class="center">
+        <br><img src="screenshots/hxd3.PNG" class="center">
         <p>
           <strong>TEXT SLOT LENGTH:</strong><br>
           Next, let's talk about the "dots" separating each text.
@@ -121,7 +121,7 @@
         <p>
           In the case of the <strong>SONIC JUMP</strong> text slot, <span class="green">the character on the right should has a value of 10, because the text takes 10 characters</span>.
         </p>
-        <img src="screenshots/hxd4.png" class="center">
+        <img src="screenshots/hxd4.PNG" class="center">
         <p>
           And if you select the whole text in the slot, you can verify the length of the text slot.<br>
           <span class="green">In this instance, the length number is 10</span>. Therefore, the 8-bit value before the start of the text slot should be 10.
@@ -129,7 +129,7 @@
         <p>
           The length value is really useful in case if you want to add new letters or other characters in the text slot.
         </p>
-        <img src="screenshots/hxd5.png" class="center">
+        <img src="screenshots/hxd5.PNG" class="center">
         <p>
           If you want to add more than 255 characters in a text slot, you first need to count the length of the text slot.<br>
           <span class="orange">In this instance, the length number is 529</span>.
@@ -163,7 +163,7 @@
           Next, let's talk about the accents and foreign language characters like the ones in Japanese or Chinese.<br>
           If you type those type of characters in the text, the game won't boot. This is because the game do not read those characters as text. Instead, you need to use the <strong>UTF-8 code point</strong> input to type those type of characters.
         </p>
-        <img src="screenshots/hxd6.png" class="center">
+        <img src="screenshots/hxd6.PNG" class="center">
         <p>
           By the way, for some reason, the apostrophes written in the .dat files count has quotes displaying in-game. If you want to make an apostrophe, you need to type or paste it in the <strong>UTF-8 code point</strong> input.
         </p>
