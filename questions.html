@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="scripts.js"></script>
   </head>
-  <body id="top" style="background-image: url('misc/bg8.gif');">
+  <body style="background-image: url('misc/bg8.gif');">
     <header>
       <span class="burger" id="burger" onclick="Nav()">&#9776;</span>
       <a href="updates.html"><img class="logo2" src="misc/title_right.png"></a>
@@ -69,17 +69,6 @@
           </p>
         </div>
       </div>
-      <div class="block">
-        <p><strong><li class="question" onclick="toggleText(4)">Can I play Sonic Jump Anniversary with a game controller?</li></strong></p>
-        <div id="answer4" style="display: none">
-          <p>
-            Unfortunately, this game isn't designed to be played with a game controller and there are currently no plans on adding controller support.
-          </p>
-          <p>
-            When playing on an emulator, you can actually use the arrow keys to play, but your controls are limited in this way.
-          </p>
-        </div>
-      </div>
       <br><hr><h1 id="extra">Extra Questions</h1>
       <div class="block">
         <p><strong><li class="question" onclick="toggleText(10)">Is Sonic Jump Anniversary a fangame?</li></strong></p>
@@ -119,6 +108,17 @@
         <div id="answer13" style="display: none">
           <p>
             Sonic Jump Anniversary has begun development by late-January 2025 and has a fluid development cycle. Therefore, it took approximately 7 months for the Anniversary mod to be completed.
+          </p>
+        </div>
+      </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(14)">Can I play Sonic Jump Anniversary with a game controller?</li></strong></p>
+        <div id="answer14" style="display: none">
+          <p>
+            Unfortunately, this game isn't designed to be played with a game controller and there are currently no plans on adding controller support.
+          </p>
+          <p>
+            When playing on an emulator, you can actually use the arrow keys to play, but your controls are limited in this way.
           </p>
         </div>
       </div>
@@ -191,9 +191,20 @@
           </p>
         </div>
       </div>
+      <div class="block">
+        <p><strong><li class="question" onclick="toggleText(25)">How to prevent my mod to replace the Sonic Jump Anniversary app during installion?</li></strong></p>
+        <div id="answer25" style="display: none">
+          <p>
+            To prevent replacing the Sonic Jump Anniversary app by your mod, you need to change the package name using an APK editor tool. The package name of Sonic Jump Anniversary is <strong>jp.co.sega.sonic_jump.monthly.sum</strong>.
+          </p>
+          <p>
+            On a side note, the game cannot be installed when the version number is lower than the installed app, unless the package name is different than the installed app.
+          </p>
+        </div>
+      </div>
       <br><hr><h1 id="gamemaps">About Game Maps</h1>
       <div class="block">
-        <p><strong><li class="question" onclick="toggleText(30)">The stage isn't turned into my own after saving. What is going on?</li></strong></p>
+        <p><strong><li class="question" onclick="toggleText(30)">After using the Map Editor, the stage isn't turned into my own after saving. What is going on?</li></strong></p>
         <div id="answer30" style="display: none">
           <p>
             The problem mostly comes from the <strong>CONFIG</strong> menu. If the stage name and graphics aren't changed, make sure to configure all settings before saving.
@@ -256,5 +267,4 @@
       <div></div>
     </footer>
   </body>
-
 </html>
