@@ -13,12 +13,13 @@
       <a href="updates.html"><img class="logo2" src="misc/title_right.png"></a>
       <nav id="mySidenav">
         <div>
-          <h2>Modding Projects</h2>
-          <a href="community.html" class="button">&#8617; BACK</a>
-          <a href="#event" class="button">Event Making</a>
-          <a href="#fps" class="button">Frame Rate Increasing</a>
-          <a href="#multiplayer" class="button">Multiplayer Mode</a>
-          <a href="#spritesheet" class="button">Sprite Sheet Manipulation</a>
+          <h2>Game Website</h2>
+          <a href="index.html" class="button">&#8617; BACK</a>
+          <a href="updates.html" class="button spaced">Updates</a>
+          <a href="projects.html" class="button-active spaced">Modding Projects</a>
+          <a href="instructions.html" class="button spaced">Instructions</a>
+          <a href="archives.html" class="button spaced">Archives</a>
+          <a href="support.html" class="button spaced">Support</a>
         </div>
       </nav>
     </header>
@@ -28,7 +29,27 @@
         <p>If you want to give some help for the game mod development, this page is for you!</p>
         <p><strong>You can check the different projects for the game mod development down below.</strong></p>
       </div>
-      <br><hr><h1 id="event">Event Making</h1>
+      <br><hr><h2 id="description">Game Translation</h2>
+      <div class="block">
+        <p>This task is simple: Translate the game into different languages. Because the game now features a language setting, we can add more languages in the game!</p>
+        <p>If you want to help for the translation by adding new languages, you can extract the game's APK file and verify the .json files located in the <strong>res/raw</strong> folder.</p>
+        <p>
+          Here are the available languages in the game:<br>
+          <ul><strong>
+            <li>English</li>
+            <li>French</li>
+            <li>Italian</li>
+            <li>German</li>
+            <li>Spanish</li>
+            <li>Portuguese</li>
+            <li>Brazilian Portuguese</li>
+            <li>Japanese</li>
+            <li>Simplified Chinese</li>
+          </strong></ul>
+        </p>
+        <p>You can work on other languages of your preferences. However, some languages may only be verified by your own responsibility.</p>
+      </div>
+      <br><hr><h2 id="event">Event Making</h2>
       <div class="block">
         <p>If you are interested on making new events for the game, you can make additional content for the event ideas.</p>
         <p>In the <strong>res/drawable</strong> folder of the extracted game, you can find similar looking images with a date prefix on their name.<br>
@@ -41,7 +62,7 @@
           </strong></ul>
         <p>If you want to share your event ideas or want to make other ideas for new events, you can contact <strong>Furrican</strong> via the <strong>Furrican Homepage</strong>.</p>
       </div>
-      <br><hr><h1 id="fps">Frame Rate Increasing</h1>
+      <br><hr><h2 id="fps">Frame Rate Increasing</h2>
       <div class="block">
         <p>
           <strong>DESCRIPTION:</strong><br>
@@ -84,7 +105,7 @@
         <hr>
         <p>With all that said, if you are an <strong>experimented Java/Smali programmer, with good debugging tools if possible</strong>, you can give some help until this project is finished. In the meantime, <strong>GdGohan</strong> can take care of the issue, but it seems more complicated than expected.</p>
       </div>
-      <br><hr><h1 id="multiplayer">Multiplayer Mode</h1>
+      <br><hr><h2 id="multiplayer">Multiplayer Mode</h2>
       <div class="block">
         <p>
           <strong>DESCRIPTION:</strong><br>
@@ -126,7 +147,7 @@
           But the problem is that this idea is way too complicated to make it possible.
         </p>
       </div>
-      <br><hr><h1 id="spritesheet">Sprite Sheet Manipulation</h1>
+      <br><hr><h2 id="spritesheet">Sprite Sheet Manipulation</h2>
       <div class="block">
         <p>While modding the game, you can modify sprites on sprite sheets, but you currently can't change their size and position values.</p>
         <p><strong>Unfortunately, the sprite size and position values aren't located in the Smali code. Instead, they are located in specific files encrypted in the .pak files (located in the "res/drawable" folder of the decompiled game).</strong></p>

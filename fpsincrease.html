@@ -14,7 +14,7 @@
       <nav id="mySidenav">
         <div>
           <h2>Fps Increasing</h2>
-          <a href="community.html" class="button">&#8617; BACK</a>
+          <a href="projects.html" class="button">&#8617; BACK</a>
           <a href="#howitworks" class="button">How the game works</a>
           <a href="#50fps" class="button">Running at 50fps</a>
           <a href="#solutions" class="button">Solutions in theory</a>
@@ -27,14 +27,14 @@
         <p>The goal of this project is to make the Android port of Sonic Jump running at a higher frame rate. However, while this sounds simple, this task is actually too demanding to make it possible. This page explains how to make the game running smooth and why it is complicated.</p>
         <p>Also, if you have enough experience with Java/Smali programming and would like to give some help for this project, you can contact <strong>Furrican</strong> via the <strong>Furrican Homepage</strong>.</p>
       </div>
-      <br><hr><h1 id="howitworks">How the game works</h1>
+      <br><hr><h2 id="howitworks">How the game works</h1>
       <div class="block">
         <p>First, you need to decompile the game's APK file to access the game's code. Then, search for "fps" in the <strong>Game_Draw</strong> Java file and you will stumble across a condition in the <strong>run()</strong> method.</p>
         <img class="center" src="screenshots/project0.PNG">
         <p>In this condition, you can see that the fps equals 1000 divided by <strong>MIMIMUM_FRAME_TIME</strong>. If you search for <strong>MIMIMUM_FRAME_TIME</strong>, you will find out that it equals 60.<br>So according to the condition, the frame rate equals 1000 / 60 = 16.66666667.</p>
         <p>Now we know that the game runs at 16.66666667fps. While you might think that the game lags so much, <strong>the game is actually desigend to run at this frame rate!</strong></p>
       </div>
-      <br><hr><h1 id="50fps">Running at 50fps</h1>
+      <br><hr><h2 id="50fps">Running at 50fps</h1>
       <div class="block">
         <p>Since we now know how the game works, all you have to know now is changing the <strong>MIMIMUM_FRAME_TIME</strong> value to increase the frame rate.</p>
         <p>Now let's make the game running at 50fps. In Smali, find <strong>MIMIMUM_FRAME_TIME</strong> in the <strong>clinit</strong> method and replace 0x3c to 0x14. This will make <strong>MIMIMUM_FRAME_TIME</strong> to equal 20.</p>
@@ -42,7 +42,7 @@
         <p>Once this value is changed, recompile the APK, and voila! Problem solved, right?</p>
         <p><strong>WRONG! As it turns out, doing so makes the game run too fast! It runs 3 times faster than it supposed to be.</strong></p>
       </div>
-      <br><hr><h1 id="solutions">Solutions in theory</h1>
+      <br><hr><h2 id="solutions">Solutions in theory</h1>
       <div class="block">
         <p>The question that is actually the right one to ask is this:<br>
         <strong>How to make the game running smoother and at the right speed?</strong></p>
